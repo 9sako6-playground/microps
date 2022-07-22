@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  clangdev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: clangdev
+    container_name: clangdev
+    volumes:
+      - .:/clangdev
+    stdin_open: true
+    tty: true
+    privileged: true
